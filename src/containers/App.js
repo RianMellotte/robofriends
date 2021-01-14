@@ -3,7 +3,7 @@ import CardList from '../components/CardList';
 import Searchbox from '../components/Searchbox';
 import Scroll from '../components/Scroll';
 import './App.css'
-
+ 
 
 class App extends Component {
 	constructor() {
@@ -18,12 +18,12 @@ class App extends Component {
 		fetch('https://jsonplaceholder.typicode.com/users')
 		.then(response => response.json())
 		.then(users => this.setState({robots: users}))
-	}	
-
+	}
 
 	onSearchChange = (event) => {
 		this.setState({ searchfield: event.target.value}) 
 	}
+
 	render() {
 		const { robots, searchfield } = this.state
 		const filteredRobots = robots.filter(robot => {
